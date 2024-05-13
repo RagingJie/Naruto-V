@@ -9,17 +9,17 @@ hero:
   actions:
     - theme: brand
       text: 创建博客
-      link: /create-bolg
+      link: https://docs.bugdesigner.cn/docs/Tutorial/vitepress.html#前言
     - theme: alt
       text: 提升自我
       link: /api-examples
 
 features:
   - title: AAAA
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 特征一
   - title: BBBB
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 特征二
   - title: CCCC
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 特征三
 ---
 
