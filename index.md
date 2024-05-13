@@ -6,6 +6,9 @@ hero:
   name: "《Naruto-V》"
   text: "专注于技术能力的提升"
   tagline: 若是生活没有了努力的方向，那活着的意义何在？
+  image: 
+    src: /backgroud.png
+    alt: 背景图
   actions:
     - theme: brand
       text: 创建博客
