@@ -1,11 +1,15 @@
 import { defineConfig } from 'vitepress'
+import { set_sidebar } from "../utils/auto-sidebar.mjs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/Naruto-V/",
   title: "《Naruto-V》个性博客",
   description: "A VitePress Site",
+  head: [["link", { rel: "icon", href: "/Naruto-V/backgroud.png" }]],
   themeConfig: {
+    // 图标logo
+    logo: '/mingren.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {
@@ -18,27 +22,29 @@ export default defineConfig({
       {
         text: '后端',
         items: [
-          { text: 'Java', link: '/Java-Study-Notes' },
+          { text: 'Java', link: '/backend/Java' },
           { text: 'Python', link: '/Python-Study-Notes' }
         ]
       }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }, {
-        text: 'Java',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    // sidebar: [
+    //   {
+    //     text: 'Examples',
+    //     items: [
+    //       { text: 'Markdown Examples', link: '/markdown-examples' },
+    //       { text: 'Runtime API Examples', link: '/api-examples' }
+    //     ]
+    //   }, {
+    //     text: 'Java',
+    //     items: [
+    //       { text: 'Markdown Examples', link: '/markdown-examples' },
+    //       { text: 'Runtime API Examples', link: '/api-examples' }
+    //     ]
+    //   }
+    // ],
+
+    sidebar: { "/backend/Java": set_sidebar("backend/Java")},
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/RagingJie' },
@@ -59,6 +65,30 @@ export default defineConfig({
     footer: {
       message: '未曾放弃，何必认输，永觉不累',
       copyright: 'Copyright © 2024-present Naruto-V'
+    },
+
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          zh: { //这里是个大坑，zh是不生效的，改为root即可
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 })
