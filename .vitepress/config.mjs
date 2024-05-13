@@ -3,14 +3,18 @@ import { set_sidebar } from "../utils/auto-sidebar.mjs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // 路径
   base: "/Naruto-V/",
+  // 导航标题
   title: "《Naruto-V》个性博客",
   description: "A VitePress Site",
+  // 浏览器标签前的logo
   head: [["link", { rel: "icon", href: "/Naruto-V/backgroud.png" }]],
   themeConfig: {
     // 图标logo
     logo: '/mingren.png',
     // https://vitepress.dev/reference/default-theme-config
+    // 导航
     nav: [
       {
         text: '前端',
@@ -22,7 +26,7 @@ export default defineConfig({
       {
         text: '后端',
         items: [
-          { text: 'Java', link: '/backend/Java' },
+          { text: 'Java', link: '/backend/Java/' },
           { text: 'Python', link: '/Python-Study-Notes' }
         ]
       }
@@ -38,14 +42,17 @@ export default defineConfig({
     //   }, {
     //     text: 'Java',
     //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
+    //       { text: 'JavaSE', link: '/backend/Java/JavaSE' },
     //       { text: 'Runtime API Examples', link: '/api-examples' }
     //     ]
     //   }
     // ],
 
-    sidebar: { "/backend/Java": set_sidebar("backend/Java")},
+    // 侧边栏菜单项的配置
+    sidebar: { '/backend/Java': set_sidebar('backend/Java') },
 
+
+    // 导航中显示带有图标的社交帐户链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/RagingJie' },
       {
@@ -62,11 +69,13 @@ export default defineConfig({
       }
     ],
 
+    // 页脚
     footer: {
       message: '未曾放弃，何必认输，永觉不累',
       copyright: 'Copyright © 2024-present Naruto-V'
     },
 
+    // 搜索框
     search: {
       provider: 'local',
       options: {
@@ -89,6 +98,21 @@ export default defineConfig({
           }
         }
       }
+    },
+
+    // 最后更新时间
+    lastUpdated: {
+      text: '更新于',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+
+    // 上一页， 下一页
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
     }
   }
 })

@@ -17,12 +17,25 @@ hero:
       text: 提升自我
       link: /api-examples
 
+# 是否显示导航栏，默认为true，显示
+# navbar: false
+
+
 features:
-  - title: AAAA
+  - icon: 🎉
+    title: 不断突破自我
     details: 特征一
-  - title: BBBB
+    
+  - icon: 🌈
+    title: BBBB
+    details: 特征二 🎉🎉♦🚀🚀🚁🚁🚀🌍🌏🌏🌈
+    
+  - icon: 🌏
+    title: BBBB
     details: 特征二
-  - title: CCCC
-    details: 特征三
+
+  - icon: 🚀
+    title: BBBB
+    details: 特征二
 ---
 
