@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/Naruto-V/',
+  base: "/Naruto-V/",
   title: "《Naruto-V》个性博客",
   description: "A VitePress Site",
   themeConfig: {
