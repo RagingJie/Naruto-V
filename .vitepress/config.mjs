@@ -11,6 +11,9 @@ export default defineConfig({
   // 浏览器标签前的logo
   head: [["link", { rel: "icon", href: "/Naruto-V/backgroud.png" }]],
   themeConfig: {
+    // 目录标题
+    outlineTitle:'文章目录',
+    outline: [2,6],
     // 图标logo
     logo: '/mingren.png',
     // https://vitepress.dev/reference/default-theme-config
@@ -26,7 +29,7 @@ export default defineConfig({
       {
         text: '后端',
         items: [
-          { text: 'Java', link: '/backend/Java/' },
+          { text: 'JavaSE', link: '/backend/JavaSE/' },
           { text: 'Python', link: '/Python-Study-Notes' }
         ]
       }
@@ -48,8 +51,12 @@ export default defineConfig({
     //   }
     // ],
 
+    // 关闭侧边栏
+    sidebar: false,
+    // 让右侧目录在左边显示
+    aside: 'left',
     // 侧边栏菜单项的配置
-    sidebar: { '/backend/Java': set_sidebar('backend/Java') },
+    sidebar: { '/backend/JavaSE': set_sidebar('backend/JavaSE/') },
 
 
     // 导航中显示带有图标的社交帐户链接
