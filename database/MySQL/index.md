@@ -52,11 +52,7 @@ select database();
 
 **<u>DOS命令打开数据库</u>**
 
-![image-20220121223450867](../../AppData/Roaming/Typora/typora-user-images/image-20220121223450867.png)
-
-```dos
-C:\Users\20459>mysql -uroot -p123456
-```
+![alt 命令行链接数据库](cmd.png)
 
 ## MySql
 
@@ -132,7 +128,7 @@ CREATE TABLE student(
 
 #### 1.3、数据类型
 
-![image-20220122151403408](../../AppData/Roaming/Typora/typora-user-images/image-20220122151403408.png)
+![alt 数据类型图](dataType.png)
 
 #### 1.4、删除表
 
@@ -632,14 +628,14 @@ ALTER TABLE emp ADD CONSTRAINT fk_emp_dept FOREIGN KEY(dep_id) REFERENCES dept(i
   - 一个部门对用多个员工，一个员工对应一个部门
 
 - **实现方式：在多的一方建立外键，指向一的一方的主键**
-- ![image-20220201204725599](../../AppData/Roaming/Typora/typora-user-images/image-20220201204725599.png)
+- ![alt text](one-to-many.png)
 
 ##### 2.1.2、多对多
 
 - 如：商品 和 订单
   - 一个商品对应多个订单，一个订单包含多个商品
 - **实现方式：建立第三张中间表，中间表至少包含两个外键，分别关联两方主键**
-- ![image-20220201205340175](../../AppData/Roaming/Typora/typora-user-images/image-20220201205340175.png)
+- ![alt text](many-to-many.png)
 
 **案例练习**
 
@@ -678,9 +674,7 @@ ALTER TABLE tb_order_gooods ADD CONSTRAINT fk_goods_id FOREIGN KEY(goods_id) REF
 - 一对一关系多用于表拆分，将一个实体中经常使用的字段放一张表，不经常使用的字段放另一张表，用于提升查询性能
 - 实现方式：在任意一方加入外键，关联另一方主键，并且设置外键为唯一（unique）
 
-![image-20220201211004489](../../AppData/Roaming/Typora/typora-user-images/image-20220201211004489.png)
-
-![image-20220201211028178](../../AppData/Roaming/Typora/typora-user-images/image-20220201211028178.png)
+![alt text](one-to-one.png)
 
 ### 3、多表查询
 
@@ -692,7 +686,7 @@ ALTER TABLE tb_order_gooods ADD CONSTRAINT fk_goods_id FOREIGN KEY(goods_id) REF
 
   - 链接查询
 
-    ![image-20220202173013725](../../AppData/Roaming/Typora/typora-user-images/image-20220202173013725.png)
+    ![alt text](linkedListQuery.png)
 
     - 内连接：相当于查询A　Ｂ交集数据
 
