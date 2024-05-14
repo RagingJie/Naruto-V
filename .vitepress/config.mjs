@@ -71,7 +71,8 @@ export default defineConfig({
 
     // 页脚
     footer: {
-      message: '未曾放弃，何必认输，永觉不累',
+      // message: '未曾放弃，何必认输，永觉不累',
+      message: '木叶飞舞之处，火亦生生不息',
       copyright: 'Copyright © 2024-present Naruto-V'
     },
 
