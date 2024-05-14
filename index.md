@@ -15,7 +15,7 @@ hero:
       link: https://docs.bugdesigner.cn/docs/Tutorial/vitepress.html#前言
     - theme: alt
       text: 时光记忆
-      link: /api-examples
+      link: /timeMemory/
 
 # 是否显示导航栏，默认为true，显示
 # navbar: false
