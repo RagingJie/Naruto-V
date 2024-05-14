@@ -83,7 +83,7 @@ export default defineConfig({
           { text: 'MyBatis-Plus', link: '/backend/MyBatis-Plus/' },
           { text: 'Shiro', link: '/backend/Shiro/' },
           { text: 'SpringCloud', link: '/backend/SpringCloud/' },
-          { text: 'Python', link: '/backend/Python/' }
+          { text: 'Python 3', link: '/backend/Python/' }
         ]
       },
       {
