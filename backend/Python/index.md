@@ -34,7 +34,7 @@ Python 的设计具有很强的可读性，相比其他语言经常使用英文�
 ## ===基础篇===
 **快速入门** 
 
-开始Python的第一个程序，输出：“Hello World！” 
+开始Python的第一个程序，输出：“Hello World” 
 
 ```py
 # -*- coding: UTF-8 -*-
